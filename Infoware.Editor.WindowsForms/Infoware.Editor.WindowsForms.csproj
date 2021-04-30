@@ -7,6 +7,8 @@
     <Authors>Victor Sanchez</Authors>
     <Company>Infoware Soluciones</Company>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/vicosanz/Infoware.Editor.WindowsForms</RepositoryUrl>
+    <Description>Text and HTML Editor Wysiwyg for Windows Forms</Description>
   </PropertyGroup>
 
   <ItemGroup>
