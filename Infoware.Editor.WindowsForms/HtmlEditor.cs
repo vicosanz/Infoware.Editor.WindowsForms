@@ -289,7 +289,6 @@ namespace Infoware.Editor.WindowsForms
                     break;
                 case EnumSelectionType.None:
                     return;
-                    break;
             }
             using FrmInsertLink dlg = new("Inserta enlace","Enlace");
             if (Uri.TryCreate(url, UriKind.Absolute, out Uri uri))
@@ -314,6 +313,17 @@ namespace Infoware.Editor.WindowsForms
         #region Buttons
         private void InitButtonsHandlers()
         {
+            btnBold.CheckedChanged += (s, e) => BoldChanged?.Invoke();
+            btnItalic.CheckedChanged += (s, e) => ItalicChanged?.Invoke();
+            btnUnderline.CheckedChanged += (s, e) => UnderlineChanged?.Invoke();
+            btnOrdererList.CheckedChanged += (s, e) => OrderedListChanged?.Invoke();
+            btnUnordererList.CheckedChanged += (s, e) => UnorderedListChanged.Invoke();
+            btnJustifyLeft.CheckedChanged += (s, e) => JustifyLeftChanged?.Invoke();
+            btnJustifyCenter.CheckedChanged += (s, e) => JustifyCenterChanged?.Invoke();
+            btnJustifyRight.CheckedChanged += (s, e) => JustifyRightChanged?.Invoke();
+            btnJustifyFull.CheckedChanged += (s, e) => JustifyFullChanged?.Invoke();
+            btnLink.CheckedChanged += (s, e) => IsLinkChanged?.Invoke();
+
             btnBold.Click += (s, e) => Bold();
             btnItalic.Click += (s, e) => Italic();
             btnUnderline.Click += (s, e) => Underline();
